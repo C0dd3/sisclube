@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF-8">
+      <title>SisClube</title>
+      <link rel="stylesheet" href="css/estilo.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600" rel="stylesheet">
+</head>
+<body>
+
+      <nav>
+            <div>
+                  <i class="fa fa-bars"></i>
+            </div>
+
+            <ul>
+                  <li><a href="#">Cadastros<i class="fa fa-sort-desc"></i></a>
+                  <ul>
+                        <li><a href="#">Sócio</a></li>
+                        <li><a href="#">Dependente</a></li>
+                        <li><a href="#">Convênio - Sócio</a></li>
+                        <li><a href="#">Foto - Sócio</a></li>
+                        </ul></li>
+                  <li><a href="#">Pesquisas <i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                              <li><a href="#"></a></li>
+                              <li><a href="#"></a></li>
+                              <li><a href="#"></a></li>
+                              <li><a href="#"></a></li>
+                        </ul>
+                  </li>
+                  <li><a href="#">Financeiro <i class="fa fa-sort-desc"></i></a>
+                        <ul>
+                              <li><a href="#">Gerar Boleto</a></li>
+                              <li><a href="#">Tirar Carnê</a></li>
+                              <li><a href="#">Imprimir Boleto</a></li>
+                              <li><a href="#">Imprimir Carnê</a></li>
+                              <li><a href="#">Baixar Boleto</a></li>
+                              
+                        </ul>
+                  </li>
+                  <li><a href="#">Segurança <i class="fa fa-sort-desc"></i></a>
+                  <ul>
+                              <li><a href="#">Alterar senha</a></li>
+                              <li><a href="#">Ativar usuário</a></li>
+                              <li><a href="#">Sair</a></li>     
+                  </ul></li>
+            </ul>
+      </nav>
+
+      <script type="text/javascript">
+
+      $("nav div").click(function() {
+            $("ul").slideToggle();
+            $("ul ul").css("display", "none");
+      });
+
+      $("ul li").click(function() {
+            $("ul ul").slideUp();
+            $(this).find('ul').slideToggle();
+      });
+
+      $(window).resize(function() {
+            if($(window).width() > 768) {
+                  $("ul").removeAttr('style');
+            }
+      });
+
+      </script>
+
+</body>
+</html>
